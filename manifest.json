@@ -1,0 +1,31 @@
+{
+  "$schema": "https://raw.githubusercontent.com/modelcontextprotocol/registry/main/schemas/server.schema.json",
+  "name": "bloom-profile-builder-mcp",
+  "displayName": "Bloom Profile Builder",
+  "version": "1.0.0",
+  "description": "Private 7-ring calibration tool - 21 probes, F(S⃗) fold-number, κ classifier, radial SVG, profile compute.",
+  "publisher": "AI-Native Solutions",
+  "license": "MIT",
+  "homepage": "https://github.com/sjgant80-hub/bloom-profile-builder-mcp",
+  "runtime": "node",
+  "entryPoint": "src/server.js",
+  "transport": "stdio",
+  "capabilities": {
+    "tools": [
+      "bloom_next_probe",
+      "bloom_score_answer",
+      "bloom_compute_profile",
+      "bloom_export_json",
+      "bloom_live_readings",
+      "bloom_render_radial_svg",
+      "bloom_classify_kappa"
+    ],
+    "resources": [
+      "bloom-profile-builder://probes",
+      "bloom-profile-builder://rings",
+      "bloom-profile-builder://likert",
+      "bloom-profile-builder://kappa-bands",
+      "bloom-profile-builder://band-markers"
+    ]
+  }
+}
