@@ -1,41 +1,28 @@
 {
   "name": "@ai-native-solutions/bloom-profile-builder-mcp",
   "version": "1.0.0",
+  "description": "bloom-profile-builder MCP server · stdio wrapper around @ai-native-solutions/bloom-profile-builder-sdk",
   "type": "module",
-  "description": "MCP server for the Bloom Profile Builder - exposes the 21-probe calibration engine, F(S⃗) fold-number, κ classifier, radial SVG, profile compute as MCP tools and resources.",
-  "main": "./src/server.js",
+  "main": "src/index.js",
   "bin": {
-    "bloom-profile-builder-mcp": "./src/server.js"
+    "bloom-profile-builder-mcp": "src/index.js"
   },
-  "files": ["src/", "manifest.json", "README.md", "LICENSE"],
+  "files": ["src", "README.md", "LICENSE"],
   "scripts": {
-    "start": "node src/server.js"
+    "start": "node src/index.js"
   },
-  "dependencies": {
-    "@ai-native-solutions/bloom-profile-builder-sdk": "^1.0.0",
-    "@modelcontextprotocol/sdk": "^1.0.0"
-  },
-  "keywords": [
-    "mcp",
-    "model-context-protocol",
-    "bloom-profile-builder",
-    "bloom",
-    "calibration",
-    "foldkit",
-    "sovereign",
-    "ai-native-solutions"
-  ],
+  "keywords": ["bloom-profile-builder", "mcp", "model-context-protocol", "ai-native-solutions"],
   "author": "AI-Native Solutions",
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/sjgant80-hub/bloom-profile-builder-mcp.git"
   },
-  "homepage": "https://github.com/sjgant80-hub/bloom-profile-builder-mcp",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "@ai-native-solutions/bloom-profile-builder-sdk": "^1.0.0"
+  },
   "publishConfig": {
     "access": "public"
-  },
-  "engines": {
-    "node": ">=18"
   }
 }
